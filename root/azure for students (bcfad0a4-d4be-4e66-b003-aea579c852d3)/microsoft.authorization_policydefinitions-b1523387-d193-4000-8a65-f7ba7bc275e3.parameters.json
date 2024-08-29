@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "kind": "policydefinitions",
+        "location": "global",
+        "name": "b1523387-d193-4000-8a65-f7ba7bc275e3",
+        "properties": {
+          "description": "need all env",
+          "displayName": "resourcetagchirag-updated",
+          "metadata": {},
+          "mode": "Indexed",
+          "parameters": {},
+          "policyRule": {
+            "if": {
+              "anyOf": [
+                {
+                  "exists": "false",
+                  "field": "tags[environment]"
+                },
+                {
+                  "exists": "false",
+                  "field": "tags[Creator]"
+                },
+                {
+                  "exists": "false",
+                  "field": "tags[date]"
+                }
+              ]
+            },
+            "then": {
+              "effect": "deny"
+            }
+          },
+          "version": "1.0.0",
+          "versions": [
+            "1.0.0"
+          ]
+        },
+        "type": "Microsoft.Authorization/policyDefinitions"
+      }
+    }
+  }
+}
