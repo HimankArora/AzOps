@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "kind": "policydefinitions",
+        "location": "global",
+        "name": "TagsPolicyDefinition",
+        "properties": {
+          "metadata": {},
+          "mode": "Indexed",
+          "policyRule": {
+            "if": {
+              "exists": "false",
+              "field": "tags"
+            },
+            "then": {
+              "effect": "deny"
+            }
+          },
+          "version": "1.0.0",
+          "versions": [
+            "1.0.0"
+          ]
+        },
+        "type": "Microsoft.Authorization/policyDefinitions"
+      }
+    }
+  }
+}
