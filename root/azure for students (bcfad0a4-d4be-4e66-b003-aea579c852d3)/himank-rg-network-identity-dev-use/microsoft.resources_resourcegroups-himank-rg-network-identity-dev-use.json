@@ -11,10 +11,15 @@
   "resources": [
     {
       "type": "Microsoft.Resources/resourceGroups",
-      "name": "Tej_rg",
+      "name": "himank-rg-network-identity-dev-use",
       "apiVersion": "2023-07-01",
-      "location": "centralindia",
-      "tags": {},
+      "location": "eastus",
+      "tags": {
+        "environment": "Development",
+        "landingZoneName": "MissionLandingZone",
+        "landingZoneVersion": "1.0.0",
+        "resourcePrefix": "himank"
+      },
       "properties": {}
     }
   ],
