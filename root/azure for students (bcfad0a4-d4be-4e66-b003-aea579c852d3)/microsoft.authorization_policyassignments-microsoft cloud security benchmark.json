@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "Microsoft Cloud Security Benchmark",
+      "kind": "policyassignments",
+      "apiVersion": "2024-04-01",
+      "location": "global",
+      "properties": {
+        "definitionVersion": "57.*.*",
+        "description": "The Microsoft Cloud Security Benchmark initiative represents the policies and controls implementing security recommendations defined in Microsoft Cloud Security Benchmark v2, see https://aka.ms/azsecbm. This also serves as the Microsoft Defender for Cloud default policy initiative. You can directly assign this initiative, or manage its policies and compliance results within Microsoft Defender.",
+        "displayName": "Defender Default",
+        "enforcementMode": "DoNotEnforce",
+        "metadata": {},
+        "parameters": {},
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+        "scope": "/subscriptions/bcfad0a4-d4be-4e66-b003-aea579c852d3"
+      }
+    }
+  ],
+  "outputs": {}
+}
