@@ -11,10 +11,9 @@
   "resources": [
     {
       "type": "Microsoft.Resources/resourceGroups",
-      "name": "NoOpsRG",
+      "name": "Tushar_RG",
       "apiVersion": "2023-07-01",
-      "location": "eastus",
-      "tags": {},
+      "location": "centralindia",
       "properties": {}
     }
   ],
