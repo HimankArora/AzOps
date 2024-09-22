@@ -11,7 +11,7 @@
   "resources": [
     {
       "type": "Microsoft.Resources/resourceGroups",
-      "name": "chirag-rg",
+      "name": "Fw_RG",
       "apiVersion": "2023-07-01",
       "location": "centralindia",
       "properties": {}
